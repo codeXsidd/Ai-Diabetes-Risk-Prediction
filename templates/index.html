@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AI Diabetes Risk Predictor</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #4e73df, #1cc88a);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            width: 400px;
+            box-shadow: 0px 10px 25px rgba(0,0,0,0.2);
+            text-align: center;
+        }
+
+        h2 {
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        input {
+            width: 90%;
+            padding: 8px;
+            margin: 6px 0;
+            border-radius: 6px;
+            border: 1px solid #ccc;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background: #4e73df;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            margin-top: 10px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #2e59d9;
+        }
+
+        .result {
+            margin-top: 15px;
+            font-weight: bold;
+            font-size: 18px;
+            color: #e74a3b;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>🩺 Diabetes Risk Predictor</h2>
+
+    <form action="/predict" method="post">
+        <input type="text" name="p" placeholder="Pregnancies" required>
+        <input type="text" name="g" placeholder="Glucose Level" required>
+        <input type="text" name="bp" placeholder="Blood Pressure" required>
+        <input type="text" name="st" placeholder="Skin Thickness" required>
+        <input type="text" name="i" placeholder="Insulin" required>
+        <input type="text" name="bmi" placeholder="BMI" required>
+        <input type="text" name="dpf" placeholder="Diabetes Pedigree" required>
+        <input type="text" name="age" placeholder="Age" required>
+
+        <button type="submit">Predict Risk</button>
+    </form>
+
+    <div class="result">
+        {{ prediction_text }}
+    </div>
+</div>
+
+</body>
+</html>
