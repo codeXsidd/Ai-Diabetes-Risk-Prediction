@@ -1,6 +1,8 @@
 # 🏥 Diabetes Risk Prediction Web App
 
-An AI-powered web application that predicts whether a person is at risk of diabetes based on medical inputs. The model is built using Machine Learning and deployed through a simple Flask web interface.
+An AI-powered web application that predicts whether a person is at risk of diabetes based on medical inputs. 
+The model is built using Machine Learning and deployed through a simple Flask web interface.
+
 
 ---
 
